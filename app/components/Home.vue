@@ -3,7 +3,7 @@
         <GridLayout rows="auto, *, auto" columns="*, *, *">
             <Image src="~/assets/logo.png" width="195" marginTop="20" row="0"
                 col="0" colSpan="3" />
-            <component v-for="component in componentsArray"
+            <component v-bind:key="component" v-for="component in componentsArray"
                 v-show="component === currentComponent" :is="component"
                 row="1" col="0" colSpan="3" />
             <Button :class="navigationButtonClasses('CardOfTheDay')"
