@@ -3,7 +3,7 @@
         <Label row="0" text="Card Meanings" class="title med" />
 
         <StackLayout row="1" class="meaning-card" orientation="vertical">
-            <ListView class="list-group" v-for="item in allCards"
+            <ListView class="list-group" v-for="item in allCards" v-bind:key="item"
                 backgroundColor="transparent" separatorColor="transparent">
                 <v-template>
                     <GridLayout @tap="showDetailPageModally(item)"
